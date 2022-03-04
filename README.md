@@ -2,6 +2,9 @@
 
 Javascript formatting functions for the main Brazilian number standards.
 
+<p align="center">
+<img src="https://img.shields.io/github/license/joulgs/js-utils"/>
+</p>
 
 ---
 
@@ -47,7 +50,7 @@ format different phone numbers, with or without area code, with or without the n
 
 Use
 ``` Typescript
-    formatPhoneNumber(string | number);
+formatPhoneNumber(string | number);
 ```
 
 
