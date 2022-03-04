@@ -1,0 +1,20 @@
+{
+  "name": "js-utils",
+  "version": "0.0.1",
+  "description": "Um punhado de ferramentas javascript úteis na formatação de números brasileiros.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joulgs/js-utils.git"
+  },
+  "keywords": ["telefone", "phone", "format", "formatar", "celular"],
+  "author": "joulgs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joulgs/js-utils/issues"
+  },
+  "homepage": "https://github.com/joulgs/js-utils#readme"
+}
