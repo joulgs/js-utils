@@ -3,7 +3,7 @@ const _PHONE_NUMBER_WHIT_DDD_WHIT_NINE = 11
 const _PHONE_NUMBER_WHITOUT_DDD_WHIT_NINE = 9
 const _PHONE_NUMBER_WHITOUT_DDD_WHITOUT_NINE = 8
 
-export default function formatPhoneNumber(number) {
+export default function formatPhoneNumber(number: number | string) {
     console.log('\nRUNNING src/utils/FormatPhoneNumber():')
     console.log(`DATA: ${number}`)
 
@@ -25,7 +25,7 @@ export default function formatPhoneNumber(number) {
     }
 }
 
-function _haveDDD(number) {
+function _haveDDD(number: string) {
     console.log('\nRUNNING src/utils/FormatPhoneNumber()/_haveDDD:')
     console.log(`DATA: ${number}`)
 
@@ -41,7 +41,7 @@ function _haveDDD(number) {
     }
 }
 
-function _haveNine(number) {
+function _haveNine(number: string) {
     console.log('\nRUNNING src/utils/FormatPhoneNumber()/_haveNine:')
     console.log(`DATA: ${number}`)
 

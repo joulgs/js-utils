@@ -2,19 +2,34 @@
   "name": "jgs-js-utils",
   "version": "0.0.2",
   "description": "Um punhado de ferramentas javascript úteis na formatação de números brasileiros.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --declaration",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joulgs/js-utils.git"
   },
-  "keywords": ["telefone", "phone", "format", "formatar", "celular"],
+  "keywords": [
+    "telefone",
+    "phone",
+    "format",
+    "formatar",
+    "celular"
+  ],
   "author": "joulgs",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/joulgs/js-utils/issues"
   },
-  "homepage": "https://github.com/joulgs/js-utils#readme"
+  "homepage": "https://github.com/joulgs/js-utils#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "ts-node": "^10.6.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.2"
+  }
 }
