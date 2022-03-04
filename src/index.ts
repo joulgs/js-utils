@@ -1,1 +1,1 @@
-export { default as formatPhoneNumber } from './formatPhoneNumber.js';
+export { default as formatPhoneNumber } from './formatPhoneNumber';

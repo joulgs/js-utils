@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_1 = require("./index");
+console.log('1 RESULT:  ' + (0, index_1.formatPhoneNumber)(11987654321));
+console.log('2 RESULT:  ' + (0, index_1.formatPhoneNumber)(1187654321));
+console.log('3 RESULT:  ' + (0, index_1.formatPhoneNumber)(987654321));
+console.log('4 RESULT:  ' + (0, index_1.formatPhoneNumber)(87654321));
+console.log('5 RESULT:  ' + (0, index_1.formatPhoneNumber)('11987654321'));
+console.log('6 RESULT:  ' + (0, index_1.formatPhoneNumber)('1187654321'));
+console.log('7 RESULT:  ' + (0, index_1.formatPhoneNumber)('987654321'));
+console.log('8 RESULT:  ' + (0, index_1.formatPhoneNumber)('87654321'));
