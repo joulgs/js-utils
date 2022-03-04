@@ -34,16 +34,16 @@ console.log(formatPhoneNumber(phone)); // print: (11) 9 8765-4321
 
 ---
 
-## Functions
+## Functions List
 
-- formatPhoneNumber
+- [formatPhoneNumber](#formatPhoneNumber)
 
 
 ### Using the Functions
 
- - ### formatPhoneNumber(number | string)
+ - ### `formatPhoneNumber(number | string)` {#formatPhoneNumber}
 
-formatar numeros de telefone diversos, com ou sem DDD, com ou sem o nono digito
+format different phone numbers, with or without area code, with or without the ninth digit.
 
 ``` Typescript
 
