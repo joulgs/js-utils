@@ -41,7 +41,7 @@ console.log(formatPhoneNumber(phone)); // print: (11) 9 8765-4321
 
 ### Using the Functions
 
- - ### `formatPhoneNumber(number | string)` {#formatPhoneNumber}
+ - ### formatPhoneNumber(number | string)
 
 format different phone numbers, with or without area code, with or without the ninth digit.
 
