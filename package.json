@@ -1,6 +1,6 @@
 {
   "name": "jgs-js-utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Um punhado de ferramentas javascript úteis na formatação de números brasileiros.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,9 @@
     "phone",
     "format",
     "formatar",
-    "celular"
+    "celular",
+    "numero",
+    "javascript"
   ],
   "author": "joulgs",
   "license": "MIT",
