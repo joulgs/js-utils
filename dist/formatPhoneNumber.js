@@ -5,8 +5,7 @@ const _PHONE_NUMBER_WHIT_DDD_WHIT_NINE = 11;
 const _PHONE_NUMBER_WHITOUT_DDD_WHIT_NINE = 9;
 const _PHONE_NUMBER_WHITOUT_DDD_WHITOUT_NINE = 8;
 function formatPhoneNumber(number) {
-    var _number = String(number);
-    _number = _number.trim();
+    var _number = String(number).trim();
     if (_haveDDD(_number)) {
         if (_haveNine(_number)) {
             return `(${_number.slice(0, 2)}) ${_number.slice(2, 3)} ${_number.slice(3, 7)}-${_number.slice(7, 11)}`;

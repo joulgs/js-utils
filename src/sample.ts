@@ -11,11 +11,8 @@ console.log('6 RESULT:  ' + formatPhoneNumber('1187654321'))    // (11) 8765-432
 console.log('7 RESULT:  ' + formatPhoneNumber('987654321'))     // 9 8765-4321
 console.log('8 RESULT:  ' + formatPhoneNumber('87654321'))      // 8765-4321
 
-console.log('9 RESULT:  ' + validateEmail(null))                   // false
-console.log('10 RESULT: ' + validateEmail(undefined))              // false
-console.log('11 RESULT: ' + validateEmail(''))                     // false
-console.log('12 RESULT: ' + validateEmail(123))                    // false
-console.log('13 RESULT: ' + validateEmail('teste'))                // false
-console.log('14 RESULT: ' + validateEmail('teste@'))               // false
-console.log('15 RESULT: ' + validateEmail('teste@teste'))          // false
-console.log('16 RESULT: ' + validateEmail('teste@teste.com'))      // true
+console.log('9 RESULT: ' + validateEmail(''))                   // false
+console.log('10 RESULT: ' + validateEmail('teste'))             // false
+console.log('11 RESULT: ' + validateEmail('teste@'))            // false
+console.log('12 RESULT: ' + validateEmail('teste@teste'))       // false
+console.log('13 RESULT: ' + validateEmail('teste@teste.com'))   // true
