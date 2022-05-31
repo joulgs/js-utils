@@ -40,6 +40,7 @@ console.log(formatPhoneNumber(phone)); // print: (11) 9 8765-4321
 ## Functions List
 
 - [formatPhoneNumber](#formatPhoneNumber)
+- [validateEmail](#validateEmail)
 
 
 ## Using the Functions
@@ -68,3 +69,26 @@ console.log(formatPhoneNumber('1187654321'))    // (11) 8765-4321
 console.log(formatPhoneNumber('987654321'))     // 9 8765-4321
 console.log(formatPhoneNumber('87654321'))      // 8765-4321
 ```
+
+### validateEmail
+
+returns true if the email is valid, false otherwise.
+
+Use
+``` Typescript
+validateEmail(string);
+```
+
+``` Typescript
+import { validateEmail } from "jgs-js-utils";
+
+console.log(validateEmail(null))                // false
+console.log(validateEmail(undefined))           // false
+console.log(validateEmail(123))                 // false
+console.log(validateEmail(''))                  // false
+console.log(validateEmail('teste'))             // false
+console.log(validateEmail('teste@'))            // false
+console.log(validateEmail('teste@teste'))       // false
+console.log(validateEmail('teste@teste.com'))   // true
+```
+
