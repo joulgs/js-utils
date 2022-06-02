@@ -41,7 +41,22 @@ console.log(formatPhoneNumber(phone)); // print: (11) 9 8765-4321
 
 - [formatPhoneNumber](#formatPhoneNumber)
 - [validateEmail](#validateEmail)
+- [formatZipCode](#formatZipCode)
 
+Coming soon:
+- [formatCnpj](#formatCnpj)
+- [formatCpf](#formatCpf)
+- [formatCpfCnpj](#formatCpfCnpj)
+- [formatDate](#formatCpfCnpj)
+- [formatTime](#formatCpfCnpj)
+- [formatDateTime](#formatCpfCnpj)
+- [formatMoney](#formatMoney)
+- [onlyNumbers](#formatMoney)
+- [validateCpf](#validateCpf)
+- [validateCnpj](#validateCnpj)
+- [validateCpfCnpj](#validateCnpj)
+- [validateNis (Portugal 9 digits)](#validateNis)
+- [validateNis (Angola 10 digits)](#validateNis)
 
 ## Using the Functions
 
@@ -92,3 +107,19 @@ console.log(validateEmail('teste@teste'))       // false
 console.log(validateEmail('teste@teste.com'))   // true
 ```
 
+### formatZipCode
+
+returns a string with the zip code formatted.
+
+Use
+``` Typescript
+formatZipCode(string | number);
+```
+
+``` Typescript
+import { formatZipCode } from "jgs-js-utils";
+
+console.log(formatZipCode(1234567))             // 1234567
+console.log(formatZipCode(12345678))            // 12345-678
+console.log(formatZipCode('12345678'))          // 12345-678
+```

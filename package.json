@@ -1,6 +1,6 @@
 {
   "name": "jgs-js-utils",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Um punhado de ferramentas javascript úteis na formatação de números brasileiros e outras tarefas cotidianas.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,9 +26,12 @@
     "validar",
     "validar-email",
     "validar-email-js",
-    "validar-email-node",
-    "validar-email-ts",
-    "validar-email-typescript"
+    "validar-email-typescript",
+    "cep",
+    "cep-js",
+    "zipcode",
+    "zipcode-js",
+    "zipcode-typescript"
   ],
   "author": "joulgs",
   "license": "MIT",
