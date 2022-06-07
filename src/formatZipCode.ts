@@ -3,7 +3,7 @@ import onlyNumbers from "./onlyNumbers"
 export default function formatZipCode(ZipCode: string | number) : string {
     if(ZipCode === null || ZipCode === undefined) { console.warn('formatZipCode received a null or undefined value'); return ''; }
     
-    const _zipcode = onlyNumbers(String(ZipCode)).trim();
+    const _zipcode = onlyNumbers(String(ZipCode));
 
     if(_zipcode.length === 0)
         return '';

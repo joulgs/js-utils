@@ -8,7 +8,7 @@ const _PHONE_NUMBER_WHITOUT_DDD_WHITOUT_NINE = 8
 export default function formatPhoneNumber(number: number | string ) : string {
     if(number === null || number === undefined) { console.warn('formatPhoneNumber received a null or undefined value'); return ''; }
     
-    var _number = onlyNumbers(String(number)).trim();
+    var _number = onlyNumbers(String(number));
     
     if(_haveDDD(_number)) {
         if(_haveNine(_number)) {
