@@ -28,15 +28,22 @@ import {
 // console.log('Expected: 12345-678        | RESULT: ' + formatZipCode('12345678'))
 // console.log('Expected: 1234567          | RESULT: ' + formatZipCode(1234567))
 
-// console.log( validateCpf('476.848.724-60'))
-// console.log( validateCpf('225668949-22'))
-// console.log( validateCpf(84832198327))
+// console.log(formatOnlyNumbers('cpf: 476.848.724-60'));       // 1234567890
+// console.log(formatOnlyNumbers('     476848724-60 '));   // 1234567890
+// console.log(formatOnlyNumbers('476848724-60 pos'));   // 1234567890
 
-// console.log(validateCnpj('01.988.848/0001-00'))
+console.log( validateCpf('476.848.724-60'))
+console.log( validateCpf('225668949-22'))
+console.log( validateCpf(84832198327))
+console.log( validateCpf('476.848.724-69'))
+console.log( validateCpf('225668949-21'))
+console.log( validateCpf(84832198326))
+
 // console.log(validateCnpj('77272951000144'))
-// console.log(validateCnpj('99.374.904/0001-44'))
+// console.log(validateCnpj('77.272.951/0001-44'))
 // console.log(validateCnpj(77272951000144))
-// console.log(validateCnpj(7727295100014))
-// console.log(validateCnpj(17272951000144))
+// console.log(validateCnpj('77.272.951/0001-43'))
+// console.log(validateCnpj(77272951000143))
+// console.log(validateCnpj(177272951000144))
 // console.log(validateCnpj(''))
-// console.log(validateCnpj(null)) 
+// console.log(validateCnpj(null))

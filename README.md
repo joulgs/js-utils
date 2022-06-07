@@ -35,13 +35,18 @@ var phone = 11987654321
 console.log(formatPhoneNumber(phone)); // print: (11) 9 8765-4321
 ```
 
+> ⚠️ all functions will show a warning on the console if given a **null** or **undefined** value and will return **false** or an **empty string**.
+
 ---
 
 ## Functions List
 
+- [formatOnlyNumbers](#formatOnlyNumbers)
 - [formatPhoneNumber](#formatPhoneNumber)
-- [validateEmail](#validateEmail)
 - [formatZipCode](#formatZipCode)
+- [validateEmail](#validateEmail)
+- [validateCnpj](#validateCnpj)
+- [validateCpf](#validateCpf)
 
 Coming soon:
 - [formatCnpj](#formatCnpj)
@@ -51,14 +56,30 @@ Coming soon:
 - [formatTime](#formatCpfCnpj)
 - [formatDateTime](#formatCpfCnpj)
 - [formatMoney](#formatMoney)
-- [onlyNumbers](#formatMoney)
-- [validateCpf](#validateCpf)
-- [validateCnpj](#validateCnpj)
 - [validateCpfCnpj](#validateCnpj)
 - [validateNis (Portugal 9 digits)](#validateNis)
 - [validateNis (Angola 10 digits)](#validateNis)
 
 ## Using the Functions
+
+### formatOnlyNumbers
+
+returns a **string** with only numbers.
+
+Use
+``` Typescript
+formatOnlyNumbers(string | number);
+```
+
+
+``` Typescript
+
+import { formatOnlyNumbers } from "jgs-js-utils";
+
+console.log( formatOnlyNumbers('cpf: 476.848.724-60') );  // 47684872460
+console.log( formatOnlyNumbers('     476848724-60 ') );   // 47684872460
+console.log( formatOnlyNumbers('476848724-60 pos') );     // 47684872460
+```
 
 ### formatPhoneNumber
 
@@ -74,37 +95,15 @@ formatPhoneNumber(string | number);
 
 import { formatPhoneNumber } from "jgs-js-utils";
 
-console.log(formatPhoneNumber(11987654321))     // (11) 9 8765-4321
-console.log(formatPhoneNumber(1187654321))      // (11) 8765-4321
-console.log(formatPhoneNumber(987654321))       // 9 8765-4321
-console.log(formatPhoneNumber(87654321))        // 8765-4321
+console.log( formatPhoneNumber(11987654321) );   // (11) 9 8765-4321
+console.log( formatPhoneNumber(1187654321) );    // (11) 8765-4321
+console.log( formatPhoneNumber(987654321) );     // 9 8765-4321
+console.log( formatPhoneNumber(87654321) );      // 8765-4321
 
-console.log(formatPhoneNumber('11987654321'))   // (11) 9 8765-4321
-console.log(formatPhoneNumber('1187654321'))    // (11) 8765-4321
-console.log(formatPhoneNumber('987654321'))     // 9 8765-4321
-console.log(formatPhoneNumber('87654321'))      // 8765-4321
-```
-
-### validateEmail
-
-returns true if the email is valid, false otherwise.
-
-Use
-``` Typescript
-validateEmail(string);
-```
-
-``` Typescript
-import { validateEmail } from "jgs-js-utils";
-
-console.log(validateEmail(null))                // false
-console.log(validateEmail(undefined))           // false
-console.log(validateEmail(123))                 // false
-console.log(validateEmail(''))                  // false
-console.log(validateEmail('teste'))             // false
-console.log(validateEmail('teste@'))            // false
-console.log(validateEmail('teste@teste'))       // false
-console.log(validateEmail('teste@teste.com'))   // true
+console.log( formatPhoneNumber('11987654321') ); // (11) 9 8765-4321
+console.log( formatPhoneNumber('1187654321') );  // (11) 8765-4321
+console.log( formatPhoneNumber('987654321') );   // 9 8765-4321
+console.log( formatPhoneNumber('87654321') );    // 8765-4321
 ```
 
 ### formatZipCode
@@ -119,7 +118,65 @@ formatZipCode(string | number);
 ``` Typescript
 import { formatZipCode } from "jgs-js-utils";
 
-console.log(formatZipCode(1234567))             // 1234567
-console.log(formatZipCode(12345678))            // 12345-678
-console.log(formatZipCode('12345678'))          // 12345-678
+console.log( formatZipCode(1234567) );      // 1234567
+console.log( formatZipCode(12345678) );     // 12345-678
+console.log( formatZipCode('12345678') );   // 12345-678
+```
+
+ 
+
+returns true if the email is valid, false otherwise.
+
+Use
+``` Typescript
+validateEmail(string);
+```
+
+``` Typescript
+import { validateEmail } from "jgs-js-utils";
+
+console.log( validateEmail('') );                  // false
+console.log( validateEmail('teste') );             // false
+console.log( validateEmail('teste@') );            // false
+console.log( validateEmail('teste@teste') );       // false
+console.log( validateEmail('teste@teste.com') );   // true
+```
+
+### validateCnpj
+
+returns true if the CNPJ is valid, false otherwise.
+
+Use
+``` Typescript
+validateCnpj(string | number);
+```
+
+``` Typescript
+import { validateCnpj } from "jgs-js-utils";
+
+console.log( validateCnpj('77272951000144') );     // true
+console.log( validateCnpj('77.272.951/0001-44') ); // true
+console.log( validateCnpj(77272951000144) );       // true
+console.log( validateCnpj('77.272.951/0001-43') ); // false
+console.log( validateCnpj(77272951000143) );       // false
+```
+
+### validateCpf
+
+returns true if the CPF is valid, false otherwise.
+
+Use
+``` Typescript
+validateCpf(string | number);
+```
+
+``` Typescript
+import { validateCnpj } from "jgs-js-utils";
+
+console.log( validateCpf('476.848.724-60') ); // true
+console.log( validateCpf('225668949-22') );   // true
+console.log( validateCpf(84832198327) );      // true
+console.log( validateCpf('476.848.724-69') ); // false
+console.log( validateCpf('225668949-21') );   // false
+console.log( validateCpf(84832198326) );      // false
 ```
