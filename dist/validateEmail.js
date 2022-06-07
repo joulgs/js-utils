@@ -1,6 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function validateEmail(email) {
+    if (email === null || email === undefined) {
+        console.warn('validateEmail received a null or undefined value');
+        return false;
+    }
     const _email = String(email).trim();
     if (_email.length === 0)
         return false;

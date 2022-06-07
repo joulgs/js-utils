@@ -1,6 +1,6 @@
 {
   "name": "jgs-js-utils",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Um punhado de ferramentas javascript úteis na formatação de números brasileiros e outras tarefas cotidianas.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

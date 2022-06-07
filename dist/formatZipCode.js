@@ -1,7 +1,15 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const formatOnlyNumbers_1 = __importDefault(require("./formatOnlyNumbers"));
 function formatZipCode(ZipCode) {
-    const _zipcode = String(ZipCode).trim();
+    if (ZipCode === null || ZipCode === undefined) {
+        console.warn('formatZipCode received a null or undefined value');
+        return '';
+    }
+    const _zipcode = (0, formatOnlyNumbers_1.default)(String(ZipCode));
     if (_zipcode.length === 0)
         return '';
     if (_zipcode.length != 8)
