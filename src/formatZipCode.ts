@@ -1,9 +1,9 @@
-import onlyNumbers from "./onlyNumbers"
+import formatOnlyNumbers from "./formatOnlyNumbers"
 
 export default function formatZipCode(ZipCode: string | number) : string {
     if(ZipCode === null || ZipCode === undefined) { console.warn('formatZipCode received a null or undefined value'); return ''; }
     
-    const _zipcode = onlyNumbers(String(ZipCode));
+    const _zipcode = formatOnlyNumbers(String(ZipCode));
 
     if(_zipcode.length === 0)
         return '';

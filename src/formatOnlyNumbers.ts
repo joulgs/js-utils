@@ -1,4 +1,4 @@
-export default function onlyNumbers(string: string ) : string {
+export default function formatOnlyNumbers(string: string ) : string {
     if(string === null || string === undefined) { console.warn('onlyNumbers received a null or undefined value'); return ''; }
     
     const _string = String(string).trim();
