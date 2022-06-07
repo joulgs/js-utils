@@ -1,9 +1,10 @@
-import validateCpf from "./validateCpf";
+import validateCnpj from "./validateCnpj";
 import {
     validateEmail,
     formatOnlyNumbers,
     formatPhoneNumber,
-    formatZipCode
+    formatZipCode,
+    validateCpf
 } from "./index";
 
 // console.log('Expected: (11) 9 8765-4321 | RESULT: ' + formatPhoneNumber(11987654321))     // (11) 9 8765-4321
@@ -30,3 +31,12 @@ import {
 // console.log( validateCpf('476.848.724-60'))
 // console.log( validateCpf('225668949-22'))
 // console.log( validateCpf(84832198327))
+
+// console.log(validateCnpj('01.988.848/0001-00'))
+// console.log(validateCnpj('77272951000144'))
+// console.log(validateCnpj('99.374.904/0001-44'))
+// console.log(validateCnpj(77272951000144))
+// console.log(validateCnpj(7727295100014))
+// console.log(validateCnpj(17272951000144))
+// console.log(validateCnpj(''))
+// console.log(validateCnpj(null)) 
