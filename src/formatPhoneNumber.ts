@@ -1,10 +1,14 @@
+import onlyNumbers from "./onlyNumbers"
+
 const _PHONE_NUMBER_WHIT_DDD_WHITOUT_NINE = 10
 const _PHONE_NUMBER_WHIT_DDD_WHIT_NINE = 11
 const _PHONE_NUMBER_WHITOUT_DDD_WHIT_NINE = 9
 const _PHONE_NUMBER_WHITOUT_DDD_WHITOUT_NINE = 8
 
-export default function formatPhoneNumber(number: number | string) : string {
-    var _number = String(number).trim();
+export default function formatPhoneNumber(number: number | string ) : string {
+    if(number === null || number === undefined) { console.warn('formatPhoneNumber received a null or undefined value'); return ''; }
+    
+    var _number = onlyNumbers(String(number)).trim();
     
     if(_haveDDD(_number)) {
         if(_haveNine(_number)) {

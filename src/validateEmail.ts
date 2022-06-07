@@ -1,4 +1,6 @@
 export default function validateEmail(email: string) : boolean {
+    if(email === null || email === undefined) { console.warn('validateEmail received a null or undefined value'); return false; }
+    
     const _email = String(email).trim();
 
     if(_email.length === 0)

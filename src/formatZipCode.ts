@@ -1,4 +1,6 @@
 export default function formatZipCode(ZipCode: string | number) : string {
+    if(ZipCode === null || ZipCode === undefined) { console.warn('formatZipCode received a null or undefined value'); return ''; }
+    
     const _zipcode = String(ZipCode).trim();
 
     if(_zipcode.length === 0)
