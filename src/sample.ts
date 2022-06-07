@@ -1,8 +1,9 @@
-import formatZipCode from "./formatZipCode";
+import validateCpf from "./validateCpf";
 import {
-    formatPhoneNumber,
     validateEmail,
-    onlyNumbers 
+    formatOnlyNumbers,
+    formatPhoneNumber,
+    formatZipCode
 } from "./index";
 
 // console.log('Expected: (11) 9 8765-4321 | RESULT: ' + formatPhoneNumber(11987654321))     // (11) 9 8765-4321
@@ -26,4 +27,6 @@ import {
 // console.log('Expected: 12345-678        | RESULT: ' + formatZipCode('12345678'))
 // console.log('Expected: 1234567          | RESULT: ' + formatZipCode(1234567))
 
-console.log('Expected: 11987654321          | RESULT: ' + onlyNumbers('tel: 11987654321'))
+// console.log( validateCpf('476.848.724-60'))
+// console.log( validateCpf('225668949-22'))
+// console.log( validateCpf(84832198327))
