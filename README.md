@@ -123,7 +123,7 @@ console.log( formatZipCode(12345678) );     // 12345-678
 console.log( formatZipCode('12345678') );   // 12345-678
 ```
 
- 
+ ### validateEmail
 
 returns true if the email is valid, false otherwise.
 
