@@ -4,7 +4,10 @@ import {
     formatOnlyNumbers,
     formatPhoneNumber,
     formatZipCode,
-    validateCpf
+    validateCpf,
+    formatCnpj,
+    formatCpf,
+    formatCnp
 } from "./index";
 
 // console.log('Expected: (11) 9 8765-4321 | RESULT: ' + formatPhoneNumber(11987654321))     // (11) 9 8765-4321
@@ -32,12 +35,12 @@ import {
 // console.log(formatOnlyNumbers('     476848724-60 '));   // 1234567890
 // console.log(formatOnlyNumbers('476848724-60 pos'));   // 1234567890
 
-console.log( validateCpf('476.848.724-60'))
-console.log( validateCpf('225668949-22'))
-console.log( validateCpf(84832198327))
-console.log( validateCpf('476.848.724-69'))
-console.log( validateCpf('225668949-21'))
-console.log( validateCpf(84832198326))
+// console.log( validateCpf('476.848.724-60'))
+// console.log( validateCpf('225668949-22'))
+// console.log( validateCpf(84832198327))
+// console.log( validateCpf('476.848.724-69'))
+// console.log( validateCpf('225668949-21'))
+// console.log( validateCpf(84832198326))
 
 // console.log(validateCnpj('77272951000144'))
 // console.log(validateCnpj('77.272.951/0001-44'))
@@ -47,3 +50,20 @@ console.log( validateCpf(84832198326))
 // console.log(validateCnpj(177272951000144))
 // console.log(validateCnpj(''))
 // console.log(validateCnpj(null))
+
+// console.log(formatCnpj(27579093000107))
+// console.log(formatCnpj('27579093000107'))
+
+// console.log(formatCpf(84832198327))
+// console.log(formatCpf('84832198327'))
+// console.log(formatCpf(8483219832))
+// console.log(formatCpf('8483219832'))
+
+console.log(formatCnp(27579093000107))
+console.log(formatCnp('27579093000107'))
+console.log(formatCnp('2757909300010'))
+console.log(formatCnp(84832198327))
+console.log(formatCnp('84832198327'))
+console.log(formatCnp(8483219832))
+console.log(formatCnp('8483219832'))
+

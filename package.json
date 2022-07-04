@@ -1,6 +1,6 @@
 {
   "name": "jgs-js-utils",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "Um punhado de ferramentas javascript úteis na formatação de números brasileiros e outras tarefas cotidianas.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,8 @@
     "formatar",
     "javascript",
     "typescript",
-    "js"
+    "js",
+    "ts"
   ],
   "author": "joulgs",
   "license": "MIT",

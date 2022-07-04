@@ -12,13 +12,13 @@ Javascript formatting functions for the main Brazilian number standards.
 
 - Using NPM
 
-```
+```bash
 npm install jgs-js-utils
 ```
 
 - Using YARN
 
-```
+```bash
 yarn add jgs-js-utils
 ```
 
@@ -44,14 +44,15 @@ console.log(formatPhoneNumber(phone)); // print: (11) 9 8765-4321
 - [formatOnlyNumbers](#formatOnlyNumbers)
 - [formatPhoneNumber](#formatPhoneNumber)
 - [formatZipCode](#formatZipCode)
+- [formatCnpj](#formatCnpj)
+- [formatCpf](#formatCpf)
 - [validateEmail](#validateEmail)
 - [validateCnpj](#validateCnpj)
 - [validateCpf](#validateCpf)
+- [formatCnp](#formatCnp)
 
 Coming soon:
-- [formatCnpj](#formatCnpj)
-- [formatCpf](#formatCpf)
-- [formatCpfCnpj](#formatCpfCnpj)
+
 - [formatDate](#formatCpfCnpj)
 - [formatTime](#formatCpfCnpj)
 - [formatDateTime](#formatCpfCnpj)
@@ -123,7 +124,57 @@ console.log( formatZipCode(12345678) );     // 12345-678
 console.log( formatZipCode('12345678') );   // 12345-678
 ```
 
- ### validateEmail
+### formatCnpj
+
+returns a string with the CNPJ formatted.
+
+Use
+``` Typescript
+formatCnpj(string | number);
+```
+
+``` Typescript
+import { formatCnpj } from "jgs-js-utils";
+
+console.log( formatCnpj(12345678000104) );    // 12.345.678/0001-04
+console.log( formatCnpj('12345678000104') );  // 12.345.678/0001-04
+```
+
+### formatCpf
+
+returns a string with the CPF formatted.
+
+Use
+``` Typescript
+formatCpf(string | number);
+```
+
+``` Typescript
+import { formatCpf } from "jgs-js-utils";
+
+console.log( formatCpf(12345678901) );    // 123.456.789-01
+console.log( formatCpf('12345678901') );  // 123.456.789-01
+```
+
+### formatCnp
+
+return a string with the CNPJ or CPF formatted.
+
+Use
+``` Typescript
+formatCnp(string | number);
+```
+
+``` Typescript
+import { formatCnp } from "jgs-js-utils";
+
+console.log( formatCnp(12345678000104) );    // 12.345.678/0001-04
+console.log( formatCnp('12345678000104') );  // 12.345.678/0001-04
+console.log( formatCnp(12345678901) );       // 123.456.789-01
+console.log( formatCnp('12345678901') );     // 123.456.789-01
+```
+
+### validateEmail
 
 returns true if the email is valid, false otherwise.
 
