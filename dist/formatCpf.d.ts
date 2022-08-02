@@ -1,1 +1,1 @@
-export default function formatCpf(CPF: string | number): string;
+export default function formatCpf(number: number | string): string;

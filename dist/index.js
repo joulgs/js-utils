@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validateCnpj = exports.validateCpf = exports.formatOnlyNumbers = exports.formatZipCode = exports.validateEmail = exports.formatPhoneNumber = void 0;
+exports.formatCnp = exports.formatCpf = exports.formatCnpj = exports.validateCnpj = exports.validateCpf = exports.formatOnlyNumbers = exports.formatZipCode = exports.validateEmail = exports.formatPhoneNumber = void 0;
 var formatPhoneNumber_1 = require("./formatPhoneNumber");
 Object.defineProperty(exports, "formatPhoneNumber", { enumerable: true, get: function () { return __importDefault(formatPhoneNumber_1).default; } });
 var validateEmail_1 = require("./validateEmail");
@@ -16,3 +16,9 @@ var validateCpf_1 = require("./validateCpf");
 Object.defineProperty(exports, "validateCpf", { enumerable: true, get: function () { return __importDefault(validateCpf_1).default; } });
 var validateCnpj_1 = require("./validateCnpj");
 Object.defineProperty(exports, "validateCnpj", { enumerable: true, get: function () { return __importDefault(validateCnpj_1).default; } });
+var formatCnpj_1 = require("./formatCnpj");
+Object.defineProperty(exports, "formatCnpj", { enumerable: true, get: function () { return __importDefault(formatCnpj_1).default; } });
+var formatCpf_1 = require("./formatCpf");
+Object.defineProperty(exports, "formatCpf", { enumerable: true, get: function () { return __importDefault(formatCpf_1).default; } });
+var formatCnp_1 = require("./formatCnp");
+Object.defineProperty(exports, "formatCnp", { enumerable: true, get: function () { return __importDefault(formatCnp_1).default; } });

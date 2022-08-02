@@ -4,3 +4,6 @@ export { default as formatZipCode } from './formatZipCode';
 export { default as formatOnlyNumbers } from './formatOnlyNumbers';
 export { default as validateCpf } from './validateCpf';
 export { default as validateCnpj } from './validateCnpj';
+export { default as formatCnpj } from './formatCnpj';
+export { default as formatCpf } from './formatCpf';
+export { default as formatCnp } from './formatCnp';
